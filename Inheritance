@@ -1,0 +1,28 @@
+class Room{
+	int length;
+	int breath;
+	Room(int x,int y){
+		length=x;
+		breath=y;
+	}
+	int area(){
+		return (length*breath);
+	}
+}
+class BedRoom extends Room{    
+	int heigt;
+	BedRoom(int x,int y,int z){
+		super(x,y);
+		heigt=z;
+	}
+	int volume(){
+		return(length*breath*heigt);
+	}
+}
+class LengthTest{
+	public static void main(String[] args){
+		BedRoom b1=new BedRoom(14,12,10);
+		System.out.println("Area:: "+b1.area());
+		System.out.println("Volume:: "+b1.volume());
+	}
+}
