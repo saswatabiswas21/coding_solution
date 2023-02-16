@@ -1,0 +1,27 @@
+//Methord over loading
+class MethordOverloading{
+        void test(){
+            System.out.println("Empty!!!");
+        }
+        void test(int a){
+            System.out.println("Int a:: "+a);
+        }
+        void test(int a,int b){
+            System.out.println("Int a & b is:: "+a+" & "+b);
+        }
+        double test(double a){
+            System.out.println("Double a:: "+a);
+            return a*a;
+        }
+}
+class DemoOverload{
+    public static void main(String[] args){
+        MethordOverloading m1=new MethordOverloading();
+        double r;
+        m1.test();
+        m1.test(10);
+        m1.test(10,20);
+        r=m1.test(124.2134);
+       System.out.println("The reasult of m1.test(124.2134) is:: "+r);
+    }
+}
