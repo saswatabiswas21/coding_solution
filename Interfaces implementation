@@ -1,0 +1,26 @@
+//Implenting interfaces
+interface Area{
+	final static float pi=3.14f;      //interface implrmented
+	float compute(float x,float y);
+}
+class Reactangle implements Area{		//another implementation
+	public float compute(float x,float y){
+		return(x*y);
+	}
+}
+class Circle implements Area{
+	public float compute(float x,float y){
+		return(pi*x*x);
+	}
+}
+class InterfaceTest{
+	public static void main(String[] args){
+		Reactangle r=new Reactangle();
+		Circle c=new Circle();
+		Area area;				//Interface object
+		area=r;
+		System.out.println("Area of Reactangle = "+area.compute(10,20));
+		area=c;
+		System.out.println("Area of Circle= "+area.compute(10,0));
+	}
+}
